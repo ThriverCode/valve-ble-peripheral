@@ -48,7 +48,8 @@ void setup() {
   }
 
   // set advertised local name and service UUID:
-  BLE.setLocalName("LED");
+  BLE.setLocalName("LED"); // 8 character limit (works on Android)
+  BLE.setDeviceName("LED"); // (works on iOS)
   BLE.setAdvertisedService(ledService);
 
   // add the characteristic to the service
